@@ -9,14 +9,14 @@ var isChecking;
 
 const KARTI_SIMBOLI = ["☠️", "⚜️", "⚔️", "☢️", "⛄", "♦️"];
 
-// function showWidth() {
-//   const width = window.innerWidth;
-//   document.getElementById("widthDisplay").textContent =
-//     "Current width: " + width + "px";
-// }
+function showWidth() {
+  const width = window.innerWidth;
+  document.getElementById("widthDisplay").textContent =
+    "Current width: " + width + "px";
+}
 
-// showWidth();
-// window.addEventListener("resize", showWidth);
+showWidth();
+window.addEventListener("resize", showWidth);
 
 document.addEventListener("DOMContentLoaded", function () {
   const modal = document.getElementById("welcomeModal");
