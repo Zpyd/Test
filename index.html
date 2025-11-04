@@ -1,85 +1,60 @@
 <!DOCTYPE html>
-<head>
-    <meta charset="utff8">
-    <title>Kviz za osnovi HTML pretty</title>
-    <link rel="stylesheet" type="text/css" href="styles.css" />
-</head>
-<body>
-    <header id="pocetok">
-        <img src="html5.png" alt="html logo" width="200" height="200"/>
-        <h1>Kviz za osnovi vo HTML</h1>
-        <p>Ova e kviz za samoevaluacija na studenti bazirano na prez. oweb_2025_html</p>
-        <p><em>Odgovori najdobro so tvoite sposobnosti i so sreka :) !!!</em></p>   
-    </header>
-    <hr>
-    
-        <form method="post" action="https://imaginarenServer.com">
-            <input type="hidden" name="Subject" value="Kviz za html"/>
-            
-            <section id="Login">
-                <h3>Vnesi prvo tvoj informacii</h3>
-                <p><label for="ime">Ime:</label><input type="text" id="ime" maxlength="30"></p>
-                <p><label for="indeks">Indeks:</label><input type="text" id="indeks" maxlength="30"></p>
-                <p><label for="mail">Mail:</label><input type="text" id="mail"></p>
-        </section>
-           <section id="quiz">
-        <h2>Quiz:</h2>
-        <ol>
-            <li>
-                <h3>Sto znaci HTML?</h3>
-                <p><input type="radio" name="q1" value="hipster" id="opt1"><label for="opt1">HipsteriTreniratMaliLami</label></p>
-                <p><input type="radio" name="q1" value="hyperte" id="opt2"><label for="opt2">HyperTextMarkupLanguage</label></p>
-                <p><input type="radio" name="q1" value="hickok" id="opt3"><label for="opt3">HickokTrazeMekiLikovi</label></p>
-                <p><input type="radio" name="q1" value="hintovi" id="opt4"><label for="opt4">HintoviTrebatMalceLi</label></p>
-            </li>
-            
-            <li>
-                <h3>Sto e ulogata na HTML?</h3>
-                <p><input type="radio" name="q2" value="presmetki" id="q2-opt1"><label for="q2-opt1">Da pravi presmetki za zadadeni funkcii</label></p>
-                <p><input type="radio" name="q2" value="sliki" id="q2-opt2"><label for="q2-opt2">Da go odreduva formatot na sliki</label></p>
-                <p><input type="radio" name="q2" value="format/struk" id="q2-opt3"><label for="q2-opt3">Da ja odreduvuva strukturata i sodrzinata na dokumentite koi se prikazuvaat na WEB browserite</label></p>
-                <p><input type="radio" name="q2" value="mailovi" id="q2-opt4"><label for="q2-opt4">Prakanje na mailovi</label></p>
-            </li>
-        </ol>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Memorija</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+  <body>
+    <div id="welcomeModal" class="modal-overlay">
+      <div class="modal-content">
+        <h2>
+          👋 Бујрум на игра
+          <span style="color: rgb(201, 23, 23)" ;>Mеморија</span> од 12 карти!
+        </h2>
+        <p style="">
+          Created with ♥️ by Aleksandar Gjorgiev
+          <span style="font-weight: bolder">126/2022</span>
+        </p>
+        <button id="closeModalBtn">AJMOO!</button>
+      </div>
+    </div>
 
-        <h2>Slednite prasanja se so multiple choice answers:</h2>
-        
-        <ol start="3">
-            <li>
-                <h3>Odberi gi tocnite raboti za HTML?</h3>
-                <p><input type="checkbox" name="q3" value="serveri" id="q3-opt1"><label for="q3-opt1">HTML dok se cuvaat na web serveri</label></p>
-                <p><input type="checkbox" name="q3" value="hyperte" id="q3-opt2"><label for="q3-opt2">Imaat .xtml ekstenzija</label></p>
-                <p><input type="checkbox" name="q3" value="ureduvanje" id="q3-opt3"><label for="q3-opt3">Vo &lt;head&gt; se pisuva glavnata sodrzina</label></p>
-                <p><input type="checkbox" name="q3" value="DOCTYPE" id="q3-opt4"><label for="q3-opt4">Sekoj html dokument pocnuva so &lt;!DOCTYPE html&gt;</label></p>
-            </li>
-            
-            <li>
-                <h3>Sto e tocno za ovie HTML elementi?</h3>
-                <p><input type="checkbox" name="q4" value="hiperlink" id="q4-opt1"><label for="q4-opt1">&lt;a&gt; tagot se koristi za kreiranje hiperlinkovi</label></p>
-                <p><input type="checkbox" name="q4" value="img" id="q4-opt2"><label for="q4-opt2">&lt;img&gt; Mora da ima closing tag</label></p>
-                <p><input type="checkbox" name="q4" value="titl" id="q4-opt3"><label for="q4-opt3">&lt;title&gt; go definira imeto so se pokazuva na browser tabot</label></p>
-                <p><input type="checkbox" name="q4" value="divi" id="q4-opt4"><label for="q4-opt4">&lt;div&gt; Se koristi za grupiranje i layout</label></p>
-            </li>
-            
-            <li>
-                <h3>Sto e tocno za ovie HTML atributi?</h3>
-                <p><input type="checkbox" name="q5" value="hrefat" id="q5-opt1"><label for="q5-opt1">href se koristi vo &lt;a&gt; tagot za specificciranje na link destinacijata</label></p>
-                <p><input type="checkbox" name="q5" value="srcat" id="q5-opt2"><label for="q5-opt2">src vo &lt;img&gt; tagot ja specificira lokacijata na slikata</label></p>
-                <p><input type="checkbox" name="q5" value="altat" id="q5-opt3"><label for="q5-opt3">alt atributot ni nude alternativen tekst dokolku ne se loadira slikata</label></p>
-                <p><input type="checkbox" name="q5" value="metodat" id="q5-opt4"><label for="q5-opt4">metod atributata vo form ni kazuva na koj nacin ke se pretstavi slikata</label></p>
-            </li>
-        </ol>
-    </section>
-            
-            <div id="priKraj">
-                <input type="submit" value="ISPRATI">
-                <input type="reset" value="RESETIRAJ">
-                <a href="#pocetok">Vrni se na pocetok</a>
-            </div>    
-        </form>
-        <hr>
+    <header>
+      <button onclick="play()" id="start-button">START</button>
+      <h1 id="Attempts-count"></h1>
+    </header>
+    <br />
+
+    <content id="Kartite">
+      <div class="karti-container" id="karti-container">
+        <div class="card" id="k0"></div>
+        <div class="card" id="k1"></div>
+        <div class="card" id="k2"></div>
+        <div class="card" id="k3"></div>
+        <div class="card" id="k4"></div>
+        <div class="card" id="k5"></div>
+        <div class="card" id="k6"></div>
+        <div class="card" id="k7"></div>
+        <div class="card" id="k8"></div>
+        <div class="card" id="k9"></div>
+        <div class="card" id="k10"></div>
+        <div class="card" id="k11"></div>
+      </div>
+    </content>
+
+    <div id="congratsModal" class="modal-overlay">
+      <div class="modal-content">
+        <h2>🥳WOHOOOOO CONGRATSSS🎉</h2>
+        <p
+          style="color: rgb(33, 136, 4); font-weight: bolder"
+          id="attempts-display"
+        ></p>
+      </div>
+    </div>
     <footer>
-        <p>&copy; by Aleksandar Gjorgiev <strong>126/2022</strong></p>
-        <p>Kontakt: <a href="mailto:ksiar1262022@feit.ukim.edu.mk">ksiar1262022@feit.ukim.edu.mk</a></p>
+      <h2 id="widthDisplay"></h2>
     </footer>
-</body>
+    <script src="memorija.js"></script>
+  </body>
+</html>
