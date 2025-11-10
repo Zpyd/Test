@@ -1,61 +1,101 @@
 <!DOCTYPE html>
-<html>
-  <head>
+<html lang="en">
+
+<head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Memorija</title>
-    <link rel="stylesheet" type="text/css" href="styles.css" />
-  </head>
-  <body>
-    <div id="welcomeModal" class="modal-overlay">
-      <div class="modal-content">
-        <h2>
-          👋 Бујрум на игра
-          <span style="color: rgb(201, 23, 23)" ;>Mеморија</span> од 12 карти!
-        </h2>
-        <p style="">
-          Created with ♥️ by Aleksandar Gjorgiev
-          <span style="font-weight: bolder">126/2022</span>
-        </p>
-        <button id="closeModalBtn">AJMOO!</button>
-      </div>
-    </div>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CityExplorer</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="bla.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+</head>
 
-    <header>
-      <button onclick="play()" id="start-button">START</button>
-      <h1 id="Attempts-count"></h1>
+<body>
+    <header class="text-dark text-center py-3" style="background-color: #e8dcc2;
+
+
+">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-auto">
+                    <div class="dropdown">
+                        <button class="btn btn-light dropdown-toggle btn-lg" type="button" data-bs-toggle="dropdown">
+                            <i class="bi bi-list"></i>
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li class="dropdown-submenu">
+                                <a class="dropdown-item dropdown-toggle" href="#">Stip</a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Galery</a></li>
+                                    <li><a class="dropdown-item" href="#">TourGuide</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown-submenu">
+                                <a class="dropdown-item dropdown-toggle" href="#">Gevgelija</a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Galery</a></li>
+                                    <li><a class="dropdown-item" href="#">TourGuide</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown-submenu">
+                                <a class="dropdown-item dropdown-toggle" href="#">Trubarevo</a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Galery</a></li>
+                                    <li><a class="dropdown-item" href="#">TourGuide</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col text-center">
+                    <h1 class="display-4 fw-bold mb-0">City Explorer</h1>
+                </div>
+
+                <div class="col-auto">
+                    <button type="button" style="" class="btn btn-primary me-2" data-bs-toggle="modal"
+                        data-bs-target="#loginModal" id="loginBtn">
+                        Login
+                    </button>
+
+                    <div id="loginModal" class="modal-overlay">
+                        <div class="modal-content">
+                            <h2>
+                                bla
+
+                            </h2>
+                            <p style="">
+
+
+                            </p>
+                            <button id="closeModalBtn">AJMOO!</button>
+                        </div>
+                    </div>
+                    <a href="#" class="btn btn-outline-secondary">Sign up</a>
+                </div>
+            </div>
+        </div>
     </header>
-    <br />
+    <section class="text-white text-center p-5 py-md-9" id="sliderCityGalery"
+        style="background: url('Galerija/Stip/stip_1.jpg') center/cover no-repeat">
+        <button class="btn-slide-control" id="prevslideBtn">‹</button>
+        <button class="btn-slide-control" id="nextslideBtn">›</button>
+        <div class="container py-8-custom">
+            <h1 class="display-1 fw-bolder" id="city-intro-name">Stip</h1>
+            <p class="lead mb-4 fw-bol">Discover amazing places and experiences.</p>
+            <a href="#" class="btn btn-light btn-lg" id="visit-city-btn">Explore Stip</a>
+        </div>
+    </section>
+    <section class="container py-5">
+        <h2>What we offer</h2>
+        <hr>
+    </section>
 
-    <content id="Kartite">
-      <div class="karti-container" id="karti-container">
-        <div class="card" id="k0"></div>
-        <div class="card" id="k1"></div>
-        <div class="card" id="k2"></div>
-        <div class="card" id="k3"></div>
-        <div class="card" id="k4"></div>
-        <div class="card" id="k5"></div>
-        <div class="card" id="k6"></div>
-        <div class="card" id="k7"></div>
-        <div class="card" id="k8"></div>
-        <div class="card" id="k9"></div>
-        <div class="card" id="k10"></div>
-        <div class="card" id="k11"></div>
-      </div>
-    </content>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        crossorigin="anonymous"></script>
+    <script src="funkcionalnost.js"></script>
 
-    <div id="congratsModal" class="modal-overlay">
-      <div class="modal-content">
-        <h2>🥳WOHOOOOO CONGRATSSS🎉</h2>
-        <p
-          style="color: rgb(33, 136, 4); font-weight: bolder"
-          id="attempts-display"
-        ></p>
-      </div>
-    </div>
-    <footer>
-      <h2 id="widthDisplay"></h2>
-    </footer>
-    <script src="memorija.js"></script>
-  </body>
+
+</body>
+
 </html>
